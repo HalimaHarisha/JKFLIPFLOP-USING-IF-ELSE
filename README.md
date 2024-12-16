@@ -41,6 +41,23 @@ PROGRAM
 Program for flipflops and verify its truth table in quartus using Verilog programming.
 Developed by:HALIMA HARISHA A
 RegisterNumber:24901005
+~~~
+  module Verilog1(j,k,clk,q,qbar);
+  input j,k,clk;
+  output reg q,qbar;
+  initial 
+  begin
+  q=1'b0;
+  q=1'b1;
+  end 
+
+  always @(posedge clk)
+  begin 
+  q<=(j&~q)|(~k&q);
+  qbar<=~q;
+  end
+  endmodule
+~~~
 
 
 RTL LOGIC FOR FLIPFLOPS
